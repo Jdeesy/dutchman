@@ -9,20 +9,27 @@
           <input type="hidden" name="num_shrimp" value="5" />
           <table class="table">
             <tr>
-              <td class=btn-block><input type="submit" name="refill" value="Refill Buffet" id="refill-buffet-id" type="button" class="btn btn-primary btn-block" /></td>
+              <td class=btn-block>
+                <input type="submit" name="refill" value="Refill Buffet" id="refill-buffet-id" type="button" class="btn btn-primary btn-block" />
+              </td>
               <td>Shrimp in buffet:</td>
               <td><span id="shrimp-in-buffet-id" class="badge"><%= @shrimp_in_buffet %></span></td>
             </tr>
+
             <tr>
-              <td><input type="submit" id="restock-shrimp-button-id" value="Restock Shrimp" name="restock"  type="button" class="btn btn-primary btn-block" /></td>
+              <td>
+                <input type="submit" id="restock-shrimp-button-id" value="Restock Shrimp" name="restock"  type="button" class="btn btn-primary btn-block" />
+              </td>
               <td>Shrimp in stock room:</td>
               <td><span id="shrimp-in-stock-room-id" class="badge"><%= @shrimp_in_stock_room %></span></td>
             </tr>
+
             <tr>
               <td></td>
               <td>Delivery person status:</td>
               <td><span id="delivery-person-status-id" class="badge"><%= @delivery_person_status %></span></td>
             </tr>
+
             <tr>
               <td></td>
               <td>Javascript?</td>
