@@ -2,6 +2,10 @@ require 'bunny'
 
 class WelcomeController < ApplicationController
   def index
+    # this is the home page where everything is displayed to the user
+    # this conn/bunny stuff is what is talking with the RabbitMQ Client
+    # we create a new channel, and then declare a queue called buffet
+
     conn = Bunny.new
     conn.start
     channel = conn.create_channel
@@ -17,6 +21,7 @@ class WelcomeController < ApplicationController
     conn.start
     channel = conn.create_channel
     exchange = channel.default_exchange
+
     if params[:restock]
       num = params[:num_shrimp].to_i
       exchange.publish({num: num}.to_json, routing_key: 'shrimp-deliveries')
